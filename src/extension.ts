@@ -30,10 +30,10 @@ class Nextword {
 
 					var output = "";
 					try {
-						output = child_process.execSync("nextword", { input: input }).toString();
+						output = child_process.execSync("mocword", { input: input }).toString();
 					} catch (e) {
-						console.log("nextword error:", e);
-						vscode.window.showErrorMessage("nextword error:" + String(e));
+						console.log("mocword error:", e);
+						vscode.window.showErrorMessage("mocword error:" + String(e));
 						prov.available = false;
 						return new vscode.CompletionList([], false);
 					}
